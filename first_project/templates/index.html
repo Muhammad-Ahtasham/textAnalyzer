@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>welcome to text analyzer</h1>
-    <form action="/analyze" method="get">
+    <form action="/analyze" method="post"> {% csrf_token %}
         <textarea name="text" id="" cols="150" rows="10"></textarea><br>
         <input type="checkbox" name="removepunc"> Remove Punctuations <br> 
         <input type="checkbox" name="fullcaps"> UPPER CASE <br> 

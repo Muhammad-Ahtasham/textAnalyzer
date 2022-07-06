@@ -6,10 +6,10 @@ def index(reqeust):
     return render(reqeust, 'index.html')
 
 def analyze(request):
-    djtext = request.GET.get('text', 'default')
-    removepunc = request.GET.get('removepunc', 'off')
-    newlineremover = request.GET.get('newlineremover', 'off')
-    fullcaps = request.GET.get('fullcaps', 'off')
+    djtext = request.POST.get('text', 'default')
+    removepunc = request.POST.get('removepunc', 'off')
+    newlineremover = request.POST.get('newlineremover', 'off')
+    fullcaps = request.POST.get('fullcaps', 'off')
     
     if removepunc== 'on':
         print(removepunc)
